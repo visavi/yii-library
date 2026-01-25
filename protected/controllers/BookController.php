@@ -28,7 +28,7 @@ class BookController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view', 'report'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -162,6 +162,28 @@ class BookController extends Controller
 			'model'=>$model,
 		));
 	}
+
+    public function actionReport()
+    {
+        $year = (int)Yii::app()->request->getParam('year', date('Y'));
+
+        if ($year < 1800 || $year > date('Y') + 1) {
+            $year = date(' Y');
+        }
+
+        $authors = Yii::app()->db->createCommand()
+            ->select('a.id, a.full_name, COUNT(b.id) as book_count')
+            ->from('authors a')
+            ->join('book_author ba', 'a.id = ba.author_id')
+            ->join('books b', 'ba.book_id = b.id')
+            ->where('b.year = :year', [':year' => $year])
+            ->group('a.id, a.full_name')
+            ->order('book_count DESC')
+            ->limit(10)
+            ->queryAll();
+
+        $this->render('report', compact('authors', 'year'));
+    }
 
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.

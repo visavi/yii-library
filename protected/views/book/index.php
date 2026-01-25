@@ -9,6 +9,7 @@ $this->breadcrumbs=array(
 $this->menu=array(
 	array('label'=>'Create Book', 'url'=>array('create')),
 	array('label'=>'Manage Book', 'url'=>array('admin')),
+	array('label'=>'Отчет по годам', 'url'=>array('report')),
 );
 ?>
 
