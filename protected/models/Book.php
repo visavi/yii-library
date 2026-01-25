@@ -11,6 +11,7 @@
  * @property string $isbn
  * @property string $cover_image
  * @property integer $created_at
+ * @property array $authors
  */
 class Book extends CActiveRecord
 {
@@ -56,6 +57,21 @@ class Book extends CActiveRecord
         }
 
         parent::afterFind();
+    }
+
+    /**
+     * Before delete
+     */
+    protected function beforeDelete()
+    {
+        if (!empty($this->cover_image)) {
+            $path = Yii::app()->basePath . '/../images/' . $this->cover_image;
+            if (file_exists($path)) {
+                unlink($path);
+            }
+        }
+
+        return parent::beforeDelete();
     }
 
 	/**

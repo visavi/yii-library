@@ -165,7 +165,7 @@ class BookController extends Controller
 
     public function actionReport()
     {
-        $year = (int)Yii::app()->request->getParam('year', date('Y'));
+        $year = (int) Yii::app()->request->getParam('year', date('Y'));
 
         if ($year < 1800 || $year > date('Y') + 1) {
             $year = date(' Y');
