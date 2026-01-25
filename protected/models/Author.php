@@ -82,6 +82,23 @@ class Author extends CActiveRecord
 		));
 	}
 
+    /**
+     * Возвращает топ-10 авторов по количеству книг за указанный год
+     */
+    public static function getTopAuthorsByYear(int $year): array
+    {
+        return Yii::app()->db->createCommand()
+            ->select('a.id, a.full_name, COUNT(b.id) as book_count')
+            ->from('authors a')
+            ->join('book_author ba', 'a.id = ba.author_id')
+            ->join('books b', 'ba.book_id = b.id')
+            ->where('b.year = :year', [':year' => $year])
+            ->group('a.id, a.full_name')
+            ->order('book_count DESC')
+            ->limit(10)
+            ->queryAll();
+    }
+
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!

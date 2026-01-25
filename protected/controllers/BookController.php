@@ -167,20 +167,11 @@ class BookController extends Controller
     {
         $year = (int) Yii::app()->request->getParam('year', date('Y'));
 
-        if ($year < 1800 || $year > date('Y') + 1) {
-            $year = date(' Y');
+        if ($year < 1800 || $year > date('Y')) {
+            $year = date('Y');
         }
 
-        $authors = Yii::app()->db->createCommand()
-            ->select('a.id, a.full_name, COUNT(b.id) as book_count')
-            ->from('authors a')
-            ->join('book_author ba', 'a.id = ba.author_id')
-            ->join('books b', 'ba.book_id = b.id')
-            ->where('b.year = :year', [':year' => $year])
-            ->group('a.id, a.full_name')
-            ->order('book_count DESC')
-            ->limit(10)
-            ->queryAll();
+        $authors = Author::getTopAuthorsByYear($year);
 
         $this->render('report', compact('authors', 'year'));
     }
