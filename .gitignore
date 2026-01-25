@@ -1,7 +1,6 @@
 .DS_Store
 .idea/
 
-
 /composer.lock
 /protected/vendor
 /protected/runtime
