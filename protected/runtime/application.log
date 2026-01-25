@@ -1,0 +1,901 @@
+2026/01/23 12:09:49 [error] [php] include(User.php): Failed to open stream: No such file or directory (/Users/visavi/PhpstormProjects/yii/framework/YiiBase.php:463)
+Stack trace:
+#0 /Users/visavi/PhpstormProjects/yii/framework/YiiBase.php(463): include()
+#1 /Users/visavi/PhpstormProjects/yii/library/protected/components/UserIdentity.php(20): autoload()
+#2 /Users/visavi/PhpstormProjects/yii/library/protected/models/LoginForm.php(54): UserIdentity->authenticate()
+#3 /Users/visavi/PhpstormProjects/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate()
+#4 /Users/visavi/PhpstormProjects/yii/framework/validators/CValidator.php(201): CInlineValidator->validateAttribute()
+#5 /Users/visavi/PhpstormProjects/yii/framework/base/CModel.php(159): CInlineValidator->validate()
+#6 /Users/visavi/PhpstormProjects/yii/library/protected/controllers/SiteController.php(94): LoginForm->validate()
+#7 /Users/visavi/PhpstormProjects/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#8 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(286): SiteController->runAction()
+#10 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#11 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#12 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#13 /Users/visavi/PhpstormProjects/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#14 /Users/visavi/PhpstormProjects/yii/library/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=site/login
+in /Users/visavi/PhpstormProjects/yii/library/protected/components/UserIdentity.php (20)
+in /Users/visavi/PhpstormProjects/yii/library/protected/models/LoginForm.php (54)
+in /Users/visavi/PhpstormProjects/yii/library/protected/controllers/SiteController.php (94)
+2026/01/23 14:41:06 [error] [exception.CException] CException: Property "UserIdentity._id" is not defined. in /Users/visavi/PhpstormProjects/yii/framework/base/CComponent.php:172
+Stack trace:
+#0 /Users/visavi/PhpstormProjects/yii/library/protected/components/UserIdentity.php(26): CComponent->__set('_id', '1')
+#1 /Users/visavi/PhpstormProjects/yii/library/protected/models/LoginForm.php(54): UserIdentity->authenticate()
+#2 /Users/visavi/PhpstormProjects/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 /Users/visavi/PhpstormProjects/yii/framework/validators/CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 /Users/visavi/PhpstormProjects/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#5 /Users/visavi/PhpstormProjects/yii/library/protected/controllers/SiteController.php(94): CModel->validate()
+#6 /Users/visavi/PhpstormProjects/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#7 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#11 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 /Users/visavi/PhpstormProjects/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /Users/visavi/PhpstormProjects/yii/library/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://localhost:8080/index.php?r=site/login
+---
+2026/01/24 23:18:21 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /Users/visavi/PhpstormProjects/yii/framework/web/CController.php:337
+Stack trace:
+#0 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#4 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('book/view')
+#5 /Users/visavi/PhpstormProjects/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#6 /Users/visavi/PhpstormProjects/yii/library/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php?r=book/view
+---
+2026/01/24 23:18:27 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /Users/visavi/PhpstormProjects/yii/framework/web/CController.php:337
+Stack trace:
+#0 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#4 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('book/view/3')
+#5 /Users/visavi/PhpstormProjects/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#6 /Users/visavi/PhpstormProjects/yii/library/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php?r=book/view/3
+---
+2026/01/24 23:18:50 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "3". in /Users/visavi/PhpstormProjects/yii/framework/web/CController.php:486
+Stack trace:
+#0 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(270): CController->missingAction('3')
+#1 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(282): CController->run('3')
+#2 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('book/3')
+#3 /Users/visavi/PhpstormProjects/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /Users/visavi/PhpstormProjects/yii/library/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=book/3
+---
+2026/01/24 23:18:56 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "3". in /Users/visavi/PhpstormProjects/yii/framework/web/CController.php:486
+Stack trace:
+#0 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(270): CController->missingAction('3')
+#1 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(282): CController->run('3')
+#2 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('book/3/view')
+#3 /Users/visavi/PhpstormProjects/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /Users/visavi/PhpstormProjects/yii/library/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=book/3/view
+---
+2026/01/24 23:20:06 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "view?id=3". in /Users/visavi/PhpstormProjects/yii/framework/web/CController.php:486
+Stack trace:
+#0 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(270): CController->missingAction('view?id=3')
+#1 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(282): CController->run('view?id=3')
+#2 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('book/view?id=3')
+#3 /Users/visavi/PhpstormProjects/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /Users/visavi/PhpstormProjects/yii/library/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=book/view?id=3
+---
+2026/01/24 23:20:15 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "iinde". in /Users/visavi/PhpstormProjects/yii/framework/web/CController.php:486
+Stack trace:
+#0 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(270): CController->missingAction('iinde')
+#1 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(282): CController->run('iinde')
+#2 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('book/iinde')
+#3 /Users/visavi/PhpstormProjects/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /Users/visavi/PhpstormProjects/yii/library/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=book/iinde
+---
+2026/01/24 23:43:32 [error] [exception.CDbException] CDbException: Adding a foreign key constraint to an existing table is not supported by SQLite. in /Users/visavi/PhpstormProjects/yii/framework/db/schema/sqlite/CSqliteSchema.php:266
+Stack trace:
+#0 /Users/visavi/PhpstormProjects/yii/framework/db/CDbCommand.php(1463): CSqliteSchema->addForeignKey('fk_book_author_...', 'book_author', 'book_id', 'books', 'id', 'CASCADE', 'CASCADE')
+#1 /Users/visavi/PhpstormProjects/yii/framework/db/CDbMigration.php(366): CDbCommand->addForeignKey('fk_book_author_...', 'book_author', 'book_id', 'books', 'id', 'CASCADE', 'CASCADE')
+#2 /Users/visavi/PhpstormProjects/yii/library/protected/migrations/m260124_234149_create_book_author_table.php(13): CDbMigration->addForeignKey('fk_book_author_...', 'book_author', 'book_id', 'books', 'id', 'CASCADE', 'CASCADE')
+#3 /Users/visavi/PhpstormProjects/yii/framework/cli/commands/MigrateCommand.php(415): m260124_234149_create_book_author_table->up()
+#4 /Users/visavi/PhpstormProjects/yii/framework/cli/commands/MigrateCommand.php(109): MigrateCommand->migrateUp('m260124_234149_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 /Users/visavi/PhpstormProjects/yii/framework/console/CConsoleCommand.php(177): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 /Users/visavi/PhpstormProjects/yii/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 /Users/visavi/PhpstormProjects/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 /Users/visavi/PhpstormProjects/yii/framework/base/CApplication.php(185): CConsoleApplication->processRequest()
+#10 /Users/visavi/PhpstormProjects/yii/framework/yiic.php(33): CApplication->run()
+#11 /Users/visavi/PhpstormProjects/yii/library/protected/yiic.php(7): require_once('/Users/visavi/P...')
+#12 /Users/visavi/PhpstormProjects/yii/library/protected/yiic(4): require_once('/Users/visavi/P...')
+#13 {main}
+---
+2026/01/24 23:46:34 [error] [system.db.CDbCommand] Error in preparing SQL: CREATE TABLE 'book_author' (
+	"book_id" integer NOT NULL,
+	"author_id" integer NOT NULL,
+	PRIMARY KEY (book_id, author_id)
+)
+2026/01/24 23:46:34 [error] [system.db.CDbCommand] CDbCommand::execute() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 table 'book_author' already exists. The SQL statement executed was: CREATE TABLE 'book_author' (
+	"book_id" integer NOT NULL,
+	"author_id" integer NOT NULL,
+	PRIMARY KEY (book_id, author_id)
+).
+2026/01/24 23:46:34 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 table 'book_author' already exists. The SQL statement executed was: CREATE TABLE 'book_author' (
+	"book_id" integer NOT NULL,
+	"author_id" integer NOT NULL,
+	PRIMARY KEY (book_id, author_id)
+) in /Users/visavi/PhpstormProjects/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Users/visavi/PhpstormProjects/yii/framework/db/CDbCommand.php(1352): CDbCommand->execute()
+#1 /Users/visavi/PhpstormProjects/yii/framework/db/CDbMigration.php(250): CDbCommand->createTable('book_author', Array, NULL)
+#2 /Users/visavi/PhpstormProjects/yii/library/protected/migrations/m260124_234149_create_book_author_table.php(7): CDbMigration->createTable('book_author', Array)
+#3 /Users/visavi/PhpstormProjects/yii/framework/cli/commands/MigrateCommand.php(415): m260124_234149_create_book_author_table->up()
+#4 /Users/visavi/PhpstormProjects/yii/framework/cli/commands/MigrateCommand.php(109): MigrateCommand->migrateUp('m260124_234149_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 /Users/visavi/PhpstormProjects/yii/framework/console/CConsoleCommand.php(177): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 /Users/visavi/PhpstormProjects/yii/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 /Users/visavi/PhpstormProjects/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 /Users/visavi/PhpstormProjects/yii/framework/base/CApplication.php(185): CConsoleApplication->processRequest()
+#10 /Users/visavi/PhpstormProjects/yii/framework/yiic.php(33): CApplication->run()
+#11 /Users/visavi/PhpstormProjects/yii/library/protected/yiic.php(7): require_once('/Users/visavi/P...')
+#12 /Users/visavi/PhpstormProjects/yii/library/protected/yiic(4): require_once('/Users/visavi/P...')
+#13 {main}
+---
+2026/01/25 00:22:45 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yii.tbl_migration' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_migration`.
+2026/01/25 00:23:03 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',
+	`isbn` string(32) UNIQUE,
+	`cover_image` varchar(255),
+	`created_at` int(11)
+' at line 5. The SQL statement executed was: CREATE TABLE `books` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`title` varchar(255) NOT NULL,
+	`year` int(11) NOT NULL,
+	`description` text COMMENT,
+	`isbn` string(32) UNIQUE,
+	`cover_image` varchar(255),
+	`created_at` int(11)
+).
+2026/01/25 00:23:03 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',
+	`isbn` string(32) UNIQUE,
+	`cover_image` varchar(255),
+	`created_at` int(11)
+' at line 5. The SQL statement executed was: CREATE TABLE `books` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`title` varchar(255) NOT NULL,
+	`year` int(11) NOT NULL,
+	`description` text COMMENT,
+	`isbn` string(32) UNIQUE,
+	`cover_image` varchar(255),
+	`created_at` int(11)
+) in /Users/visavi/PhpstormProjects/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Users/visavi/PhpstormProjects/yii/framework/db/CDbCommand.php(1352): CDbCommand->execute()
+#1 /Users/visavi/PhpstormProjects/yii/framework/db/CDbMigration.php(250): CDbCommand->createTable('books', Array, NULL)
+#2 /Users/visavi/PhpstormProjects/yii/library/protected/migrations/m260123_131125_create_books_table.php(7): CDbMigration->createTable('books', Array)
+#3 /Users/visavi/PhpstormProjects/yii/framework/cli/commands/MigrateCommand.php(415): m260123_131125_create_books_table->up()
+#4 /Users/visavi/PhpstormProjects/yii/framework/cli/commands/MigrateCommand.php(109): MigrateCommand->migrateUp('m260123_131125_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 /Users/visavi/PhpstormProjects/yii/framework/console/CConsoleCommand.php(177): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 /Users/visavi/PhpstormProjects/yii/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 /Users/visavi/PhpstormProjects/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 /Users/visavi/PhpstormProjects/yii/framework/base/CApplication.php(185): CConsoleApplication->processRequest()
+#10 /Users/visavi/PhpstormProjects/yii/framework/yiic.php(33): CApplication->run()
+#11 /Users/visavi/PhpstormProjects/yii/library/protected/yiic.php(7): require_once('/Users/visavi/P...')
+#12 /Users/visavi/PhpstormProjects/yii/library/protected/yiic(4): require_once('/Users/visavi/P...')
+#13 {main}
+---
+2026/01/25 00:26:23 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',
+	`isbn` string(32) UNIQUE,
+	`cover_image` varchar(255),
+	`created_at` int(11)
+' at line 5. The SQL statement executed was: CREATE TABLE `books` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`title` varchar(255) NOT NULL,
+	`year` int(11) NOT NULL,
+	`description` text COMMENT,
+	`isbn` string(32) UNIQUE,
+	`cover_image` varchar(255),
+	`created_at` int(11)
+).
+2026/01/25 00:26:23 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',
+	`isbn` string(32) UNIQUE,
+	`cover_image` varchar(255),
+	`created_at` int(11)
+' at line 5. The SQL statement executed was: CREATE TABLE `books` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`title` varchar(255) NOT NULL,
+	`year` int(11) NOT NULL,
+	`description` text COMMENT,
+	`isbn` string(32) UNIQUE,
+	`cover_image` varchar(255),
+	`created_at` int(11)
+) in /Users/visavi/PhpstormProjects/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Users/visavi/PhpstormProjects/yii/framework/db/CDbCommand.php(1352): CDbCommand->execute()
+#1 /Users/visavi/PhpstormProjects/yii/framework/db/CDbMigration.php(250): CDbCommand->createTable('books', Array, NULL)
+#2 /Users/visavi/PhpstormProjects/yii/library/protected/migrations/m260123_131125_create_books_table.php(7): CDbMigration->createTable('books', Array)
+#3 /Users/visavi/PhpstormProjects/yii/framework/cli/commands/MigrateCommand.php(415): m260123_131125_create_books_table->up()
+#4 /Users/visavi/PhpstormProjects/yii/framework/cli/commands/MigrateCommand.php(109): MigrateCommand->migrateUp('m260123_131125_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 /Users/visavi/PhpstormProjects/yii/framework/console/CConsoleCommand.php(177): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 /Users/visavi/PhpstormProjects/yii/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 /Users/visavi/PhpstormProjects/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 /Users/visavi/PhpstormProjects/yii/framework/base/CApplication.php(185): CConsoleApplication->processRequest()
+#10 /Users/visavi/PhpstormProjects/yii/framework/yiic.php(33): CApplication->run()
+#11 /Users/visavi/PhpstormProjects/yii/library/protected/yiic.php(7): require_once('/Users/visavi/P...')
+#12 /Users/visavi/PhpstormProjects/yii/library/protected/yiic(4): require_once('/Users/visavi/P...')
+#13 {main}
+---
+2026/01/25 00:27:48 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',
+	`isbn` varchar(32) UNIQUE,
+	`cover_image` varchar(255),
+	`created_at` int(11)' at line 5. The SQL statement executed was: CREATE TABLE `books` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`title` varchar(255) NOT NULL,
+	`year` int(11) NOT NULL,
+	`description` text COMMENT,
+	`isbn` varchar(32) UNIQUE,
+	`cover_image` varchar(255),
+	`created_at` int(11)
+).
+2026/01/25 00:27:48 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',
+	`isbn` varchar(32) UNIQUE,
+	`cover_image` varchar(255),
+	`created_at` int(11)' at line 5. The SQL statement executed was: CREATE TABLE `books` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`title` varchar(255) NOT NULL,
+	`year` int(11) NOT NULL,
+	`description` text COMMENT,
+	`isbn` varchar(32) UNIQUE,
+	`cover_image` varchar(255),
+	`created_at` int(11)
+) in /Users/visavi/PhpstormProjects/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Users/visavi/PhpstormProjects/yii/framework/db/CDbCommand.php(1352): CDbCommand->execute()
+#1 /Users/visavi/PhpstormProjects/yii/framework/db/CDbMigration.php(250): CDbCommand->createTable('books', Array, NULL)
+#2 /Users/visavi/PhpstormProjects/yii/library/protected/migrations/m260123_131125_create_books_table.php(7): CDbMigration->createTable('books', Array)
+#3 /Users/visavi/PhpstormProjects/yii/framework/cli/commands/MigrateCommand.php(415): m260123_131125_create_books_table->up()
+#4 /Users/visavi/PhpstormProjects/yii/framework/cli/commands/MigrateCommand.php(109): MigrateCommand->migrateUp('m260123_131125_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 /Users/visavi/PhpstormProjects/yii/framework/console/CConsoleCommand.php(177): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 /Users/visavi/PhpstormProjects/yii/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 /Users/visavi/PhpstormProjects/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 /Users/visavi/PhpstormProjects/yii/framework/base/CApplication.php(185): CConsoleApplication->processRequest()
+#10 /Users/visavi/PhpstormProjects/yii/framework/yiic.php(33): CApplication->run()
+#11 /Users/visavi/PhpstormProjects/yii/library/protected/yiic.php(7): require_once('/Users/visavi/P...')
+#12 /Users/visavi/PhpstormProjects/yii/library/protected/yiic(4): require_once('/Users/visavi/P...')
+#13 {main}
+---
+2026/01/25 00:28:52 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',
+	`isbn` varchar(32) UNIQUE,
+	`cover_image` varchar(255),
+	`created_at` int(11)' at line 5. The SQL statement executed was: CREATE TABLE `books` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`title` varchar(255) NOT NULL,
+	`year` int(11) NOT NULL,
+	`description` text COMMENT,
+	`isbn` varchar(32) UNIQUE,
+	`cover_image` varchar(255),
+	`created_at` int(11)
+).
+2026/01/25 00:28:52 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',
+	`isbn` varchar(32) UNIQUE,
+	`cover_image` varchar(255),
+	`created_at` int(11)' at line 5. The SQL statement executed was: CREATE TABLE `books` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`title` varchar(255) NOT NULL,
+	`year` int(11) NOT NULL,
+	`description` text COMMENT,
+	`isbn` varchar(32) UNIQUE,
+	`cover_image` varchar(255),
+	`created_at` int(11)
+) in /Users/visavi/PhpstormProjects/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Users/visavi/PhpstormProjects/yii/framework/db/CDbCommand.php(1352): CDbCommand->execute()
+#1 /Users/visavi/PhpstormProjects/yii/framework/db/CDbMigration.php(250): CDbCommand->createTable('books', Array, NULL)
+#2 /Users/visavi/PhpstormProjects/yii/library/protected/migrations/m260123_131125_create_books_table.php(7): CDbMigration->createTable('books', Array)
+#3 /Users/visavi/PhpstormProjects/yii/framework/cli/commands/MigrateCommand.php(415): m260123_131125_create_books_table->up()
+#4 /Users/visavi/PhpstormProjects/yii/framework/cli/commands/MigrateCommand.php(109): MigrateCommand->migrateUp('m260123_131125_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 /Users/visavi/PhpstormProjects/yii/framework/console/CConsoleCommand.php(177): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 /Users/visavi/PhpstormProjects/yii/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 /Users/visavi/PhpstormProjects/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 /Users/visavi/PhpstormProjects/yii/framework/base/CApplication.php(185): CConsoleApplication->processRequest()
+#10 /Users/visavi/PhpstormProjects/yii/framework/yiic.php(33): CApplication->run()
+#11 /Users/visavi/PhpstormProjects/yii/library/protected/yiic.php(7): require_once('/Users/visavi/P...')
+#12 /Users/visavi/PhpstormProjects/yii/library/protected/yiic(4): require_once('/Users/visavi/P...')
+#13 {main}
+---
+2026/01/25 00:41:22 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`yii`.`book_author`, CONSTRAINT `fk_book_author_book` FOREIGN KEY (`book_id`) REFERENCES `books` (`id`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `book_author` (`book_id`, `author_id`) VALUES (:book_id, :author_id).
+2026/01/25 00:41:22 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`yii`.`book_author`, CONSTRAINT `fk_book_author_book` FOREIGN KEY (`book_id`) REFERENCES `books` (`id`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `book_author` (`book_id`, `author_id`) VALUES (:book_id, :author_id) in /Users/visavi/PhpstormProjects/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Users/visavi/PhpstormProjects/yii/framework/db/CDbCommand.php(1278): CDbCommand->execute(Array)
+#1 /Users/visavi/PhpstormProjects/yii/framework/db/CDbMigration.php(178): CDbCommand->insert('book_author', Array)
+#2 /Users/visavi/PhpstormProjects/yii/library/protected/migrations/m260124_235725_seed_books_and_authors.php(64): CDbMigration->insert('book_author', Array)
+#3 /Users/visavi/PhpstormProjects/yii/framework/cli/commands/MigrateCommand.php(415): m260124_235725_seed_books_and_authors->up()
+#4 /Users/visavi/PhpstormProjects/yii/framework/cli/commands/MigrateCommand.php(109): MigrateCommand->migrateUp('m260124_235725_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 /Users/visavi/PhpstormProjects/yii/framework/console/CConsoleCommand.php(177): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 /Users/visavi/PhpstormProjects/yii/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 /Users/visavi/PhpstormProjects/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 /Users/visavi/PhpstormProjects/yii/framework/base/CApplication.php(185): CConsoleApplication->processRequest()
+#10 /Users/visavi/PhpstormProjects/yii/framework/yiic.php(33): CApplication->run()
+#11 /Users/visavi/PhpstormProjects/yii/library/protected/yiic.php(7): require_once('/Users/visavi/P...')
+#12 /Users/visavi/PhpstormProjects/yii/library/protected/yiic(4): require_once('/Users/visavi/P...')
+#13 {main}
+---
+2026/01/25 00:43:14 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '978-5-123456-78-9' for key 'books.isbn'. The SQL statement executed was: INSERT INTO `books` (`title`, `year`, `isbn`, `description`, `cover_image`) VALUES (:title, :year, :isbn, :description, :cover_image).
+2026/01/25 00:43:14 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '978-5-123456-78-9' for key 'books.isbn'. The SQL statement executed was: INSERT INTO `books` (`title`, `year`, `isbn`, `description`, `cover_image`) VALUES (:title, :year, :isbn, :description, :cover_image) in /Users/visavi/PhpstormProjects/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Users/visavi/PhpstormProjects/yii/framework/db/CDbCommand.php(1278): CDbCommand->execute(Array)
+#1 /Users/visavi/PhpstormProjects/yii/framework/db/CDbMigration.php(178): CDbCommand->insert('books', Array)
+#2 /Users/visavi/PhpstormProjects/yii/library/protected/migrations/m260124_235725_seed_books_and_authors.php(15): CDbMigration->insert('books', Array)
+#3 /Users/visavi/PhpstormProjects/yii/framework/cli/commands/MigrateCommand.php(415): m260124_235725_seed_books_and_authors->up()
+#4 /Users/visavi/PhpstormProjects/yii/framework/cli/commands/MigrateCommand.php(109): MigrateCommand->migrateUp('m260124_235725_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 /Users/visavi/PhpstormProjects/yii/framework/console/CConsoleCommand.php(177): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 /Users/visavi/PhpstormProjects/yii/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 /Users/visavi/PhpstormProjects/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 /Users/visavi/PhpstormProjects/yii/framework/base/CApplication.php(185): CConsoleApplication->processRequest()
+#10 /Users/visavi/PhpstormProjects/yii/framework/yiic.php(33): CApplication->run()
+#11 /Users/visavi/PhpstormProjects/yii/library/protected/yiic.php(7): require_once('/Users/visavi/P...')
+#12 /Users/visavi/PhpstormProjects/yii/library/protected/yiic(4): require_once('/Users/visavi/P...')
+#13 {main}
+---
+2026/01/25 01:05:03 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'string(20) NOT NULL,
+	`created_at` int(11) NOT NULL
+)' at line 4. The SQL statement executed was: CREATE TABLE `author_subscriptions` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`author_id` int(11) NOT NULL,
+	`phone` string(20) NOT NULL,
+	`created_at` int(11) NOT NULL
+).
+2026/01/25 01:05:23 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1072 Key column 'author_id, phone' doesn't exist in table. The SQL statement executed was: CREATE UNIQUE INDEX `idx_author_phone` ON `author_subscriptions` (`author_id, phone`).
+2026/01/25 01:06:40 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'author_subscriptions' already exists. The SQL statement executed was: CREATE TABLE `author_subscriptions` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`author_id` int(11) NOT NULL,
+	`phone` varchar(20) NOT NULL,
+	`created_at` int(11) NOT NULL
+).
+2026/01/25 01:06:40 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'author_subscriptions' already exists. The SQL statement executed was: CREATE TABLE `author_subscriptions` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`author_id` int(11) NOT NULL,
+	`phone` varchar(20) NOT NULL,
+	`created_at` int(11) NOT NULL
+) in /Users/visavi/PhpstormProjects/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Users/visavi/PhpstormProjects/yii/framework/db/CDbCommand.php(1352): CDbCommand->execute()
+#1 /Users/visavi/PhpstormProjects/yii/framework/db/CDbMigration.php(250): CDbCommand->createTable('author_subscrip...', Array, NULL)
+#2 /Users/visavi/PhpstormProjects/yii/library/protected/migrations/m260125_000217_create_author_subscriptions_table.php(7): CDbMigration->createTable('author_subscrip...', Array)
+#3 /Users/visavi/PhpstormProjects/yii/framework/cli/commands/MigrateCommand.php(415): m260125_000217_create_author_subscriptions_table->up()
+#4 /Users/visavi/PhpstormProjects/yii/framework/cli/commands/MigrateCommand.php(109): MigrateCommand->migrateUp('m260125_000217_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 /Users/visavi/PhpstormProjects/yii/framework/console/CConsoleCommand.php(177): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 /Users/visavi/PhpstormProjects/yii/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 /Users/visavi/PhpstormProjects/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 /Users/visavi/PhpstormProjects/yii/framework/base/CApplication.php(185): CConsoleApplication->processRequest()
+#10 /Users/visavi/PhpstormProjects/yii/framework/yiic.php(33): CApplication->run()
+#11 /Users/visavi/PhpstormProjects/yii/library/protected/yiic.php(7): require_once('/Users/visavi/P...')
+#12 /Users/visavi/PhpstormProjects/yii/library/protected/yiic(4): require_once('/Users/visavi/P...')
+#13 {main}
+---
+2026/01/25 01:06:46 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'author_subscriptions' already exists. The SQL statement executed was: CREATE TABLE `author_subscriptions` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`author_id` int(11) NOT NULL,
+	`phone` varchar(20) NOT NULL,
+	`created_at` int(11) NOT NULL
+).
+2026/01/25 01:06:46 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'author_subscriptions' already exists. The SQL statement executed was: CREATE TABLE `author_subscriptions` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`author_id` int(11) NOT NULL,
+	`phone` varchar(20) NOT NULL,
+	`created_at` int(11) NOT NULL
+) in /Users/visavi/PhpstormProjects/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Users/visavi/PhpstormProjects/yii/framework/db/CDbCommand.php(1352): CDbCommand->execute()
+#1 /Users/visavi/PhpstormProjects/yii/framework/db/CDbMigration.php(250): CDbCommand->createTable('author_subscrip...', Array, NULL)
+#2 /Users/visavi/PhpstormProjects/yii/library/protected/migrations/m260125_000217_create_author_subscriptions_table.php(7): CDbMigration->createTable('author_subscrip...', Array)
+#3 /Users/visavi/PhpstormProjects/yii/framework/cli/commands/MigrateCommand.php(415): m260125_000217_create_author_subscriptions_table->up()
+#4 /Users/visavi/PhpstormProjects/yii/framework/cli/commands/MigrateCommand.php(109): MigrateCommand->migrateUp('m260125_000217_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 /Users/visavi/PhpstormProjects/yii/framework/console/CConsoleCommand.php(177): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 /Users/visavi/PhpstormProjects/yii/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 /Users/visavi/PhpstormProjects/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 /Users/visavi/PhpstormProjects/yii/framework/base/CApplication.php(185): CConsoleApplication->processRequest()
+#10 /Users/visavi/PhpstormProjects/yii/framework/yiic.php(33): CApplication->run()
+#11 /Users/visavi/PhpstormProjects/yii/library/protected/yiic.php(7): require_once('/Users/visavi/P...')
+#12 /Users/visavi/PhpstormProjects/yii/library/protected/yiic(4): require_once('/Users/visavi/P...')
+#13 {main}
+---
+2026/01/25 01:07:23 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1072 Key column 'author_id, phone' doesn't exist in table. The SQL statement executed was: CREATE UNIQUE INDEX `idx_author_phone` ON `author_subscriptions` (`author_id, phone`).
+2026/01/25 01:07:23 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1072 Key column 'author_id, phone' doesn't exist in table. The SQL statement executed was: CREATE UNIQUE INDEX `idx_author_phone` ON `author_subscriptions` (`author_id, phone`) in /Users/visavi/PhpstormProjects/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Users/visavi/PhpstormProjects/yii/framework/db/CDbCommand.php(1490): CDbCommand->execute()
+#1 /Users/visavi/PhpstormProjects/yii/framework/db/CDbMigration.php(395): CDbCommand->createIndex('idx_author_phon...', 'author_subscrip...', Array, true)
+#2 /Users/visavi/PhpstormProjects/yii/library/protected/migrations/m260125_000217_create_author_subscriptions_table.php(14): CDbMigration->createIndex('idx_author_phon...', 'author_subscrip...', Array, true)
+#3 /Users/visavi/PhpstormProjects/yii/framework/cli/commands/MigrateCommand.php(415): m260125_000217_create_author_subscriptions_table->up()
+#4 /Users/visavi/PhpstormProjects/yii/framework/cli/commands/MigrateCommand.php(109): MigrateCommand->migrateUp('m260125_000217_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 /Users/visavi/PhpstormProjects/yii/framework/console/CConsoleCommand.php(177): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 /Users/visavi/PhpstormProjects/yii/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 /Users/visavi/PhpstormProjects/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 /Users/visavi/PhpstormProjects/yii/framework/base/CApplication.php(185): CConsoleApplication->processRequest()
+#10 /Users/visavi/PhpstormProjects/yii/framework/yiic.php(33): CApplication->run()
+#11 /Users/visavi/PhpstormProjects/yii/library/protected/yiic.php(7): require_once('/Users/visavi/P...')
+#12 /Users/visavi/PhpstormProjects/yii/library/protected/yiic(4): require_once('/Users/visavi/P...')
+#13 {main}
+---
+2026/01/25 01:09:30 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'author_subscriptions' already exists. The SQL statement executed was: CREATE TABLE `author_subscriptions` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`author_id` int(11) NOT NULL,
+	`phone` varchar(20) NOT NULL,
+	`created_at` int(11) NOT NULL
+).
+2026/01/25 01:20:08 [error] [exception.CException] CException: CWebApplication and its behaviors do not have a method or closure named "bootstrap". in /Users/visavi/PhpstormProjects/yii/framework/base/CComponent.php:264
+Stack trace:
+#0 /Users/visavi/PhpstormProjects/yii/library/protected/views/layouts/main.php(17): CComponent->__call('bootstrap', Array)
+#1 /Users/visavi/PhpstormProjects/yii/framework/web/CBaseController.php(126): require('/Users/visavi/P...')
+#2 /Users/visavi/PhpstormProjects/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/visavi/P...', Array, true)
+#3 /Users/visavi/PhpstormProjects/yii/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/Users/visavi/P...', Array, true)
+#4 /Users/visavi/PhpstormProjects/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#5 /Users/visavi/PhpstormProjects/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#6 /Users/visavi/PhpstormProjects/yii/framework/web/CBaseController.php(215): COutputProcessor->run()
+#7 /Users/visavi/PhpstormProjects/yii/framework/web/CBaseController.php(309): CBaseController->endWidget('CContentDecorat...')
+#8 /Users/visavi/PhpstormProjects/yii/library/protected/views/layouts/column1.php(6): CBaseController->endContent()
+#9 /Users/visavi/PhpstormProjects/yii/framework/web/CBaseController.php(126): require('/Users/visavi/P...')
+#10 /Users/visavi/PhpstormProjects/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/visavi/P...', Array, true)
+#11 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(787): CBaseController->renderFile('/Users/visavi/P...', Array, true)
+#12 /Users/visavi/PhpstormProjects/yii/library/protected/controllers/BookController.php(12): CController->render('index', Array)
+#13 /Users/visavi/PhpstormProjects/yii/framework/web/actions/CInlineAction.php(49): BookController->actionIndex()
+#14 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#15 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#16 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#18 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#19 /Users/visavi/PhpstormProjects/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#20 /Users/visavi/PhpstormProjects/yii/library/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/index.php?r=book/index
+---
+2026/01/25 01:23:29 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "subscribe/index". in /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('subscribe/index')
+#1 /Users/visavi/PhpstormProjects/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/visavi/PhpstormProjects/yii/library/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=subscribe/index
+HTTP_REFERER=http://localhost:8080/index.php?r=book/index
+---
+2026/01/25 01:59:05 [error] [php] Undefined array key "SubscribeForm" (/Users/visavi/PhpstormProjects/yii/library/protected/controllers/SubscribeController.php:10)
+Stack trace:
+#0 /Users/visavi/PhpstormProjects/yii/framework/web/actions/CInlineAction.php(49): SubscribeController->actionIndex()
+#1 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(286): SubscribeController->runAction()
+#3 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(265): SubscribeController->runActionWithFilters()
+#4 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(282): SubscribeController->run()
+#5 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /Users/visavi/PhpstormProjects/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#7 /Users/visavi/PhpstormProjects/yii/library/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=subscribe/index
+in /Users/visavi/PhpstormProjects/yii/library/protected/controllers/SubscribeController.php (10)
+in /Users/visavi/PhpstormProjects/yii/library/index.php (13)
+2026/01/25 02:00:58 [error] [exception.ParseError] ParseError: Unclosed '[' does not match ')' in /Users/visavi/PhpstormProjects/yii/library/protected/controllers/SubscribeController.php:10
+Stack trace:
+#0 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(276): CWebApplication->createController('index/')
+#1 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('subscribe/index')
+#2 /Users/visavi/PhpstormProjects/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#3 /Users/visavi/PhpstormProjects/yii/library/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/index.php?r=subscribe/index
+HTTP_REFERER=http://localhost:8080/index.php?r=book/index
+---
+2026/01/25 02:37:56 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "update". in /Users/visavi/PhpstormProjects/yii/framework/web/CController.php:486
+Stack trace:
+#0 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(270): CController->missingAction('update')
+#1 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(282): CController->run('update')
+#2 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('book/update')
+#3 /Users/visavi/PhpstormProjects/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /Users/visavi/PhpstormProjects/yii/library/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=book/update&id=1
+HTTP_REFERER=http://localhost:8080/index.php?r=book
+---
+2026/01/25 03:03:46 [error] [php] Undefined variable $book (/Users/visavi/PhpstormProjects/yii/library/protected/views/book/_view.php:36)
+Stack trace:
+#0 /Users/visavi/PhpstormProjects/yii/framework/web/CBaseController.php(130): require()
+#1 /Users/visavi/PhpstormProjects/yii/framework/web/CBaseController.php(95): BookController->renderInternal()
+#2 /Users/visavi/PhpstormProjects/yii/framework/zii/widgets/CListView.php(291): BookController->renderFile()
+#3 /Users/visavi/PhpstormProjects/yii/framework/zii/widgets/CBaseListView.php(181): CListView->renderItems()
+#4 unknown(0): CListView->renderSection()
+#5 /Users/visavi/PhpstormProjects/yii/framework/zii/widgets/CBaseListView.php(164): preg_replace_callback()
+#6 /Users/visavi/PhpstormProjects/yii/framework/zii/widgets/CBaseListView.php(149): CListView->renderContent()
+#7 /Users/visavi/PhpstormProjects/yii/framework/web/CBaseController.php(182): CListView->run()
+#8 /Users/visavi/PhpstormProjects/yii/library/protected/views/book/index.php(17): BookController->widget()
+#9 /Users/visavi/PhpstormProjects/yii/framework/web/CBaseController.php(126): require()
+#10 /Users/visavi/PhpstormProjects/yii/framework/web/CBaseController.php(95): BookController->renderInternal()
+#11 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(872): BookController->renderFile()
+#12 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(785): BookController->renderPartial()
+#13 /Users/visavi/PhpstormProjects/yii/library/protected/controllers/BookController.php(134): BookController->render()
+#14 /Users/visavi/PhpstormProjects/yii/framework/web/actions/CInlineAction.php(49): BookController->actionIndex()
+#15 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#16 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CFilterChain.php(134): BookController->runAction()
+#17 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#18 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(1148): CAccessControlFilter->filter()
+#19 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CInlineFilter.php(58): BookController->filterAccessControl()
+#20 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#21 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(291): CFilterChain->run()
+#22 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(265): BookController->runActionWithFilters()
+#23 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(282): BookController->run()
+#24 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#25 /Users/visavi/PhpstormProjects/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#26 /Users/visavi/PhpstormProjects/yii/library/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=book/index
+in /Users/visavi/PhpstormProjects/yii/library/protected/views/book/_view.php (36)
+in /Users/visavi/PhpstormProjects/yii/library/protected/views/book/index.php (17)
+in /Users/visavi/PhpstormProjects/yii/library/protected/controllers/BookController.php (134)
+2026/01/25 03:14:09 [error] [php] Array to string conversion (/Users/visavi/PhpstormProjects/yii/framework/web/helpers/CHtml.php:118)
+Stack trace:
+#0 /Users/visavi/PhpstormProjects/yii/framework/utils/CFormatter.php(151): encode()
+#1 /Users/visavi/PhpstormProjects/yii/framework/utils/CFormatter.php(128): CFormatter->formatText()
+#2 /Users/visavi/PhpstormProjects/yii/framework/zii/widgets/CDetailView.php(220): CFormatter->format()
+#3 /Users/visavi/PhpstormProjects/yii/framework/web/CBaseController.php(182): CDetailView->run()
+#4 /Users/visavi/PhpstormProjects/yii/library/protected/views/book/view.php(21): BookController->widget()
+#5 /Users/visavi/PhpstormProjects/yii/framework/web/CBaseController.php(126): require()
+#6 /Users/visavi/PhpstormProjects/yii/framework/web/CBaseController.php(95): BookController->renderInternal()
+#7 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(872): BookController->renderFile()
+#8 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(785): BookController->renderPartial()
+#9 /Users/visavi/PhpstormProjects/yii/library/protected/controllers/BookController.php(54): BookController->render()
+#10 unknown(0): BookController->actionView()
+#11 /Users/visavi/PhpstormProjects/yii/framework/web/actions/CAction.php(114): ReflectionMethod->invokeArgs()
+#12 /Users/visavi/PhpstormProjects/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#13 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CFilterChain.php(134): BookController->runAction()
+#15 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(1148): CAccessControlFilter->filter()
+#17 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CInlineFilter.php(58): BookController->filterAccessControl()
+#18 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#19 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(291): CFilterChain->run()
+#20 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(265): BookController->runActionWithFilters()
+#21 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(282): BookController->run()
+#22 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#23 /Users/visavi/PhpstormProjects/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#24 /Users/visavi/PhpstormProjects/yii/library/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=book/view&id=1
+in /Users/visavi/PhpstormProjects/yii/library/protected/views/book/view.php (21)
+in /Users/visavi/PhpstormProjects/yii/library/protected/controllers/BookController.php (54)
+in /Users/visavi/PhpstormProjects/yii/library/index.php (13)
+2026/01/25 03:28:58 [error] [exception.CException] CException: Property "Book.author_ids" is not defined. in /Users/visavi/PhpstormProjects/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/visavi/PhpstormProjects/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('author_ids')
+#1 /Users/visavi/PhpstormProjects/yii/framework/web/helpers/CHtml.php(2784): CActiveRecord->__get('author_ids')
+#2 /Users/visavi/PhpstormProjects/yii/framework/web/helpers/CHtml.php(2119): CHtml::resolveValue(Object(Book), 'author_ids')
+#3 /Users/visavi/PhpstormProjects/yii/framework/web/widgets/CActiveForm.php(947): CHtml::activeCheckBoxList(Object(Book), 'author_ids', Array, Array)
+#4 /Users/visavi/PhpstormProjects/yii/library/protected/views/book/_form.php(62): CActiveForm->checkBoxList(Object(Book), 'author_ids', Array)
+#5 /Users/visavi/PhpstormProjects/yii/framework/web/CBaseController.php(126): require('/Users/visavi/P...')
+#6 /Users/visavi/PhpstormProjects/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/visavi/P...', Array, true)
+#7 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(872): CBaseController->renderFile('/Users/visavi/P...', Array, true)
+#8 /Users/visavi/PhpstormProjects/yii/library/protected/views/book/create.php(18): CController->renderPartial('_form', Array)
+#9 /Users/visavi/PhpstormProjects/yii/framework/web/CBaseController.php(126): require('/Users/visavi/P...')
+#10 /Users/visavi/PhpstormProjects/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/visavi/P...', Array, true)
+#11 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(872): CBaseController->renderFile('/Users/visavi/P...', Array, true)
+#12 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(785): CController->renderPartial('create', Array, true)
+#13 /Users/visavi/PhpstormProjects/yii/library/protected/controllers/BookController.php(77): CController->render('create', Array)
+#14 /Users/visavi/PhpstormProjects/yii/framework/web/actions/CInlineAction.php(49): BookController->actionCreate()
+#15 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#16 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#17 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#18 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#19 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#21 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(291): CFilterChain->run()
+#22 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#24 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('book/create')
+#25 /Users/visavi/PhpstormProjects/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#26 /Users/visavi/PhpstormProjects/yii/library/index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/index.php?r=book/create
+HTTP_REFERER=http://localhost:8080/index.php?r=book/view&id=1
+---
+2026/01/25 03:29:32 [error] [exception.Error] Error: Typed property Book::$author_ids must not be accessed before initialization in /Users/visavi/PhpstormProjects/yii/framework/web/helpers/CHtml.php:2784
+Stack trace:
+#0 /Users/visavi/PhpstormProjects/yii/framework/web/helpers/CHtml.php(2119): CHtml::resolveValue(Object(Book), 'author_ids')
+#1 /Users/visavi/PhpstormProjects/yii/framework/web/widgets/CActiveForm.php(947): CHtml::activeCheckBoxList(Object(Book), 'author_ids', Array, Array)
+#2 /Users/visavi/PhpstormProjects/yii/library/protected/views/book/_form.php(62): CActiveForm->checkBoxList(Object(Book), 'author_ids', Array)
+#3 /Users/visavi/PhpstormProjects/yii/framework/web/CBaseController.php(126): require('/Users/visavi/P...')
+#4 /Users/visavi/PhpstormProjects/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/visavi/P...', Array, true)
+#5 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(872): CBaseController->renderFile('/Users/visavi/P...', Array, true)
+#6 /Users/visavi/PhpstormProjects/yii/library/protected/views/book/create.php(18): CController->renderPartial('_form', Array)
+#7 /Users/visavi/PhpstormProjects/yii/framework/web/CBaseController.php(126): require('/Users/visavi/P...')
+#8 /Users/visavi/PhpstormProjects/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/visavi/P...', Array, true)
+#9 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(872): CBaseController->renderFile('/Users/visavi/P...', Array, true)
+#10 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(785): CController->renderPartial('create', Array, true)
+#11 /Users/visavi/PhpstormProjects/yii/library/protected/controllers/BookController.php(77): CController->render('create', Array)
+#12 /Users/visavi/PhpstormProjects/yii/framework/web/actions/CInlineAction.php(49): BookController->actionCreate()
+#13 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#14 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#15 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#17 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(291): CFilterChain->run()
+#20 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#22 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('book/create')
+#23 /Users/visavi/PhpstormProjects/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#24 /Users/visavi/PhpstormProjects/yii/library/index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/index.php?r=book/create
+HTTP_REFERER=http://localhost:8080/index.php?r=book/view&id=1
+---
+2026/01/25 03:36:34 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'books.isbn'. The SQL statement executed was: INSERT INTO `books` (`title`, `year`, `description`, `isbn`, `cover_image`, `created_at`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5).
+in /Users/visavi/PhpstormProjects/yii/library/protected/controllers/BookController.php (73)
+in /Users/visavi/PhpstormProjects/yii/library/index.php (13)
+2026/01/25 03:36:34 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'books.isbn'. The SQL statement executed was: INSERT INTO `books` (`title`, `year`, `description`, `isbn`, `cover_image`, `created_at`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5) in /Users/visavi/PhpstormProjects/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Users/visavi/PhpstormProjects/yii/framework/db/ar/CActiveRecord.php(1083): CDbCommand->execute()
+#1 /Users/visavi/PhpstormProjects/yii/framework/db/ar/CActiveRecord.php(811): CActiveRecord->insert(NULL)
+#2 /Users/visavi/PhpstormProjects/yii/library/protected/controllers/BookController.php(73): CActiveRecord->save()
+#3 /Users/visavi/PhpstormProjects/yii/framework/web/actions/CInlineAction.php(49): BookController->actionCreate()
+#4 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('book/create')
+#14 /Users/visavi/PhpstormProjects/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /Users/visavi/PhpstormProjects/yii/library/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=book/create
+HTTP_REFERER=http://localhost:8080/index.php?r=book/create
+---
+2026/01/25 11:41:11 [error] [php] preg_match(): Compilation failed: reference to non-existent subpattern at offset 3 (/Users/visavi/PhpstormProjects/yii/framework/validators/CRegularExpressionValidator.php:53)
+Stack trace:
+#0 /Users/visavi/PhpstormProjects/yii/framework/validators/CRegularExpressionValidator.php(53): preg_match()
+#1 /Users/visavi/PhpstormProjects/yii/framework/validators/CValidator.php(201): CRegularExpressionValidator->validateAttribute()
+#2 /Users/visavi/PhpstormProjects/yii/framework/base/CModel.php(159): CRegularExpressionValidator->validate()
+#3 /Users/visavi/PhpstormProjects/yii/library/protected/models/SubscribeForm.php(52): SubscribeForm->validate()
+#4 /Users/visavi/PhpstormProjects/yii/library/protected/controllers/SubscribeController.php(14): SubscribeForm->subscribe()
+#5 /Users/visavi/PhpstormProjects/yii/framework/web/actions/CInlineAction.php(49): SubscribeController->actionIndex()
+#6 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(286): SubscribeController->runAction()
+#8 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(265): SubscribeController->runActionWithFilters()
+#9 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(282): SubscribeController->run()
+#10 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /Users/visavi/PhpstormProjects/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#12 /Users/visavi/PhpstormProjects/yii/library/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=subscribe/index
+in /Users/visavi/PhpstormProjects/yii/library/protected/models/SubscribeForm.php (52)
+in /Users/visavi/PhpstormProjects/yii/library/protected/controllers/SubscribeController.php (14)
+in /Users/visavi/PhpstormProjects/yii/library/index.php (13)
+2026/01/25 11:41:44 [error] [php] preg_match(): Compilation failed: reference to non-existent subpattern at offset 3 (/Users/visavi/PhpstormProjects/yii/framework/validators/CRegularExpressionValidator.php:53)
+Stack trace:
+#0 /Users/visavi/PhpstormProjects/yii/framework/validators/CRegularExpressionValidator.php(53): preg_match()
+#1 /Users/visavi/PhpstormProjects/yii/framework/validators/CValidator.php(201): CRegularExpressionValidator->validateAttribute()
+#2 /Users/visavi/PhpstormProjects/yii/framework/base/CModel.php(159): CRegularExpressionValidator->validate()
+#3 /Users/visavi/PhpstormProjects/yii/library/protected/models/SubscribeForm.php(52): SubscribeForm->validate()
+#4 /Users/visavi/PhpstormProjects/yii/library/protected/controllers/SubscribeController.php(14): SubscribeForm->subscribe()
+#5 /Users/visavi/PhpstormProjects/yii/framework/web/actions/CInlineAction.php(49): SubscribeController->actionIndex()
+#6 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(286): SubscribeController->runAction()
+#8 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(265): SubscribeController->runActionWithFilters()
+#9 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(282): SubscribeController->run()
+#10 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /Users/visavi/PhpstormProjects/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#12 /Users/visavi/PhpstormProjects/yii/library/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=subscribe/index
+in /Users/visavi/PhpstormProjects/yii/library/protected/models/SubscribeForm.php (52)
+in /Users/visavi/PhpstormProjects/yii/library/protected/controllers/SubscribeController.php (14)
+in /Users/visavi/PhpstormProjects/yii/library/index.php (13)
+2026/01/25 11:42:12 [error] [php] preg_match(): Compilation failed: reference to non-existent subpattern at offset 3 (/Users/visavi/PhpstormProjects/yii/framework/validators/CRegularExpressionValidator.php:53)
+Stack trace:
+#0 /Users/visavi/PhpstormProjects/yii/framework/validators/CRegularExpressionValidator.php(53): preg_match()
+#1 /Users/visavi/PhpstormProjects/yii/framework/validators/CValidator.php(201): CRegularExpressionValidator->validateAttribute()
+#2 /Users/visavi/PhpstormProjects/yii/framework/base/CModel.php(159): CRegularExpressionValidator->validate()
+#3 /Users/visavi/PhpstormProjects/yii/library/protected/models/SubscribeForm.php(52): SubscribeForm->validate()
+#4 /Users/visavi/PhpstormProjects/yii/library/protected/controllers/SubscribeController.php(14): SubscribeForm->subscribe()
+#5 /Users/visavi/PhpstormProjects/yii/framework/web/actions/CInlineAction.php(49): SubscribeController->actionIndex()
+#6 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(286): SubscribeController->runAction()
+#8 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(265): SubscribeController->runActionWithFilters()
+#9 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(282): SubscribeController->run()
+#10 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /Users/visavi/PhpstormProjects/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#12 /Users/visavi/PhpstormProjects/yii/library/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=subscribe/index
+in /Users/visavi/PhpstormProjects/yii/library/protected/models/SubscribeForm.php (52)
+in /Users/visavi/PhpstormProjects/yii/library/protected/controllers/SubscribeController.php (14)
+in /Users/visavi/PhpstormProjects/yii/library/index.php (13)
+2026/01/25 11:51:36 [error] [exception.Error] Error: Call to a member function send() on null in /Users/visavi/PhpstormProjects/yii/library/protected/controllers/BookController.php:137
+Stack trace:
+#0 /Users/visavi/PhpstormProjects/yii/framework/web/actions/CInlineAction.php(49): BookController->actionIndex()
+#1 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#3 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#5 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#10 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#11 /Users/visavi/PhpstormProjects/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#12 /Users/visavi/PhpstormProjects/yii/library/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/index.php?r=book/index
+HTTP_REFERER=http://localhost:8080/index.php?r=book/view&id=14
+---
+2026/01/25 11:54:36 [error] [exception.Error] Error: Call to a member function send() on null in /Users/visavi/PhpstormProjects/yii/library/protected/controllers/BookController.php:137
+Stack trace:
+#0 /Users/visavi/PhpstormProjects/yii/framework/web/actions/CInlineAction.php(49): BookController->actionIndex()
+#1 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#3 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#5 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#10 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#11 /Users/visavi/PhpstormProjects/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#12 /Users/visavi/PhpstormProjects/yii/library/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/index.php?r=book/index
+HTTP_REFERER=http://localhost:8080/index.php?r=book/view&id=14
+---
+2026/01/25 11:55:04 [error] [exception.Error] Error: Call to a member function send() on null in /Users/visavi/PhpstormProjects/yii/library/protected/controllers/BookController.php:137
+Stack trace:
+#0 /Users/visavi/PhpstormProjects/yii/framework/web/actions/CInlineAction.php(49): BookController->actionIndex()
+#1 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#3 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#5 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#10 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#11 /Users/visavi/PhpstormProjects/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#12 /Users/visavi/PhpstormProjects/yii/library/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/index.php?r=book/index
+HTTP_REFERER=http://localhost:8080/index.php?r=book/view&id=14
+---
+2026/01/25 12:08:40 [error] [exception.TypeError] TypeError: get_class(): Argument #1 ($object) must be of type object, null given in /Users/visavi/PhpstormProjects/yii/library/protected/controllers/BookController.php:146
+Stack trace:
+#0 /Users/visavi/PhpstormProjects/yii/framework/web/actions/CInlineAction.php(49): BookController->actionIndex()
+#1 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#3 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#5 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#10 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#11 /Users/visavi/PhpstormProjects/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#12 /Users/visavi/PhpstormProjects/yii/library/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/index.php?r=book/index
+HTTP_REFERER=http://localhost:8080/index.php?r=book/view&id=14
+---
+2026/01/25 12:11:58 [error] [exception.CException] CException: Property "SmsPilotService.testParam" is not defined. in /Users/visavi/PhpstormProjects/yii/framework/base/CComponent.php:172
+Stack trace:
+#0 /Users/visavi/PhpstormProjects/yii/framework/YiiBase.php(227): CComponent->__set('testParam', 'working')
+#1 /Users/visavi/PhpstormProjects/yii/framework/base/CModule.php(393): YiiBase::createComponent(Array)
+#2 /Users/visavi/PhpstormProjects/yii/library/protected/controllers/BookController.php(141): CModule->getComponent('smsPilot')
+#3 /Users/visavi/PhpstormProjects/yii/framework/web/actions/CInlineAction.php(49): BookController->actionIndex()
+#4 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#13 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#14 /Users/visavi/PhpstormProjects/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /Users/visavi/PhpstormProjects/yii/library/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=book/index
+HTTP_REFERER=http://localhost:8080/index.php?r=book/view&id=14
+---
+2026/01/25 12:14:59 [error] [php] include(CHttpClient.php): Failed to open stream: No such file or directory (/Users/visavi/PhpstormProjects/yii/framework/YiiBase.php:463)
+Stack trace:
+#0 /Users/visavi/PhpstormProjects/yii/framework/YiiBase.php(463): include()
+#1 /Users/visavi/PhpstormProjects/yii/library/protected/components/SmsPilotService.php(25): autoload()
+#2 /Users/visavi/PhpstormProjects/yii/library/protected/controllers/BookController.php(137): SmsPilotService->send()
+#3 /Users/visavi/PhpstormProjects/yii/framework/web/actions/CInlineAction.php(49): BookController->actionIndex()
+#4 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CFilterChain.php(134): BookController->runAction()
+#6 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(1148): CAccessControlFilter->filter()
+#8 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CInlineFilter.php(58): BookController->filterAccessControl()
+#9 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(265): BookController->runActionWithFilters()
+#12 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(282): BookController->run()
+#13 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /Users/visavi/PhpstormProjects/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /Users/visavi/PhpstormProjects/yii/library/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=book/index
+in /Users/visavi/PhpstormProjects/yii/library/protected/components/SmsPilotService.php (25)
+in /Users/visavi/PhpstormProjects/yii/library/protected/controllers/BookController.php (137)
+in /Users/visavi/PhpstormProjects/yii/library/index.php (13)
+2026/01/25 12:17:09 [error] [sms] SMS ошибка: Защита от спама (подкл. как бизнес-клиент или исп. шаблоны или добавьте контакт в белый список)
+in /Users/visavi/PhpstormProjects/yii/library/protected/components/SmsPilotService.php (53)
+in /Users/visavi/PhpstormProjects/yii/library/protected/controllers/BookController.php (137)
+in /Users/visavi/PhpstormProjects/yii/library/index.php (13)
+2026/01/25 14:53:31 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in /Users/visavi/PhpstormProjects/yii/library/protected/controllers/BookController.php:177
+Stack trace:
+#0 /Users/visavi/PhpstormProjects/yii/library/protected/controllers/BookController.php(55): BookController->loadModel('15')
+#1 [internal function]: BookController->actionView('15')
+#2 /Users/visavi/PhpstormProjects/yii/framework/web/actions/CAction.php(114): ReflectionMethod->invokeArgs(Object(BookController), Array)
+#3 /Users/visavi/PhpstormProjects/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(BookController), Object(ReflectionMethod), Array)
+#4 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#13 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('book/view')
+#14 /Users/visavi/PhpstormProjects/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /Users/visavi/PhpstormProjects/yii/library/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=book/view&id=15
+HTTP_REFERER=http://localhost:8080/index.php?r=book/create
+---
+2026/01/25 15:09:34 [error] [exception.CException] CException: Book and its behaviors do not have a method or closure named "notifySubscribers". in /Users/visavi/PhpstormProjects/yii/framework/base/CComponent.php:264
+Stack trace:
+#0 /Users/visavi/PhpstormProjects/yii/framework/db/ar/CActiveRecord.php(229): CComponent->__call('notifySubscribe...', Array)
+#1 /Users/visavi/PhpstormProjects/yii/library/protected/controllers/BookController.php(78): CActiveRecord->__call('notifySubscribe...', Array)
+#2 /Users/visavi/PhpstormProjects/yii/framework/web/actions/CInlineAction.php(49): BookController->actionCreate()
+#3 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#7 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /Users/visavi/PhpstormProjects/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /Users/visavi/PhpstormProjects/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#12 /Users/visavi/PhpstormProjects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('book/create')
+#13 /Users/visavi/PhpstormProjects/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#14 /Users/visavi/PhpstormProjects/yii/library/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php?r=book/create
+HTTP_REFERER=http://localhost:8080/index.php?r=book/create
+---
+2026/01/25 15:11:08 [error] [sms] SMS ошибка: Защита от спама (подкл. как бизнес-клиент или исп. шаблоны или добавьте контакт в белый список)
+in /Users/visavi/PhpstormProjects/yii/library/protected/components/SmsPilotService.php (52)
+in /Users/visavi/PhpstormProjects/yii/library/protected/models/Book.php (185)
+in /Users/visavi/PhpstormProjects/yii/library/protected/controllers/BookController.php (78)
+2026/01/25 15:15:40 [error] [sms] SMS ошибка: Защита от спама (подкл. как бизнес-клиент или исп. шаблоны или добавьте контакт в белый список)
+in /Users/visavi/PhpstormProjects/yii/library/protected/components/SmsPilotService.php (45)
+in /Users/visavi/PhpstormProjects/yii/library/protected/models/Book.php (186)
+in /Users/visavi/PhpstormProjects/yii/library/protected/controllers/BookController.php (78)
+2026/01/25 15:16:38 [error] [sms] SMS ошибка: Защита от спама (подкл. как бизнес-клиент или исп. шаблоны или добавьте контакт в белый список)
+in /Users/visavi/PhpstormProjects/yii/library/protected/components/SmsPilotService.php (45)
+in /Users/visavi/PhpstormProjects/yii/library/protected/models/Book.php (186)
+in /Users/visavi/PhpstormProjects/yii/library/protected/controllers/BookController.php (78)
