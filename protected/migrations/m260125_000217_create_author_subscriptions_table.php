@@ -11,6 +11,8 @@ class m260125_000217_create_author_subscriptions_table extends CDbMigration
             'created_at' => 'integer NOT NULL',
         ]);
 
+        $this->addForeignKey('fk_author_subscriptions_author_id', 'author_subscriptions','author_id','authors', 'id', 'CASCADE','CASCADE');
+
         $this->createIndex('idx_author_phone', 'author_subscriptions', 'author_id, phone', true);
     }
 
