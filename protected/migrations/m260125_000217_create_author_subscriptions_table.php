@@ -18,6 +18,8 @@ class m260125_000217_create_author_subscriptions_table extends CDbMigration
 
     public function safeDown()
     {
+        $this->dropForeignKey('fk_author_subscriptions_author_id', 'author_subscriptions');
+        $this->dropIndex('idx_author_phone', 'author_subscriptions');
         $this->dropTable('author_subscriptions');
     }
 }
